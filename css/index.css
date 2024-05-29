@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grey+Qo&display=swap');
+
+* {
+
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+*,
+body,
+div,
+ul,
+nav,
+header,
+footer,
+a,
+li,
+label {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* -----------------------HEADER------------------------------ */
+.header {
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 4em;
+    container-type: size;
+    container-name: header;
+}
+
+.header__open-nav-button {
+    color: #000;
+    font-size: 3rem;
+    font-weight: 700;
+    position: absolute;
+    z-index: 2;
+    right: 10px;
+    cursor: pointer;
+}
+
+.header__content-logo {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+
+.header__content-img {
+    width: 4rem;
+}
+
+.header__content-logo h1 {
+    font-family: "GRey Qo", cursive;
+    font-weight: 700;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.header__content-logo>h1>span {
+    letter-spacing: 4px;
+    color: #E48F45;
+    font-family: "Grey Qo", cursive;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 1.8rem;
+    text-shadow: 1px 0px 1px #B7CADB, 0px 1px 1px #EEEEEE, 2px 1px 1px #B7CADB, 1px 2px 1px #EEEEEE, 3px 2px 1px #B7CADB, 2px 3px 1px #CACACA, 4px 3px 1px #B7CADB, 3px 4px 1px #CACACA, 5px 4px 1px #B7CADB, 4px 5px 1px #CACACA, 6px 5px 1px #B7CADB, 5px 6px 1px #CACACA, 7px 6px 1px #B7CADB;
+}
+
+
+.header .header__checkbox {
+    display: none;
+}
+
+.header__nav {
+    display: none;
+    background-color: #0009;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: 1;
+}
+
+.nav__list {
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+.header__checkbox:checked~.header__nav {
+    display: flex;
+}
+
+.nav__list-items {
+    list-style: none;
+}
+
+.nav__list-items>a {
+    color: #B7CADB;
+}
+
+.nav__list-items a:not(:is(:hover, :active)) {
+    text-decoration: none;
+}
+
+/* -----------------------HEADER QUERIES------------------------------ */
+
+@container header (min-width:600px) {
+    .header__nav {
+        background-color: antiquewhite;
+        display: block;
+        position: static;
+        height: auto;
+        width: auto;
+        justify-content: space-around;
+    }
+
+    .nav__list {
+        flex-direction: row;
+        height: auto;
+        width: auto;
+        gap: 20px;
+        margin-right: 40px;
+    }
+
+    .nav__list-items>a {
+        color: #000;
+        font-size: 1.09rem;
+    }
+
+    .header__open-nav-button {
+        display: none;
+    }
+}
+
+/* -----------------------MAIN------------------------------ */
+
+.main {
+    container-name: mein;
+    container-type: inline-size;
+}
+
+.main__content {
+    background-color: #fff;
+    min-height: 30em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    text-align: center;
+    margin: 15px;
+}
+
+
+.main__content-company>.main__h2>.span__el {
+    color: #000;
+    font-family: "GRey Qo", cursive;
+    font-weight: 700;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.span__rey {
+    margin-left: 5px;
+    letter-spacing: 4px;
+    color: #E48F45;
+    font-family: "Grey Qo", cursive;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 1.8rem;
+    text-shadow: 1px 0px 1px #B7CADB, 0px 1px 1px #EEEEEE, 2px 1px 1px #B7CADB, 1px 2px 1px #EEEEEE, 3px 2px 1px #B7CADB, 2px 3px 1px #CACACA, 4px 3px 1px #B7CADB, 3px 4px 1px #CACACA, 5px 4px 1px #B7CADB, 4px 5px 1px #CACACA, 6px 5px 1px #B7CADB, 5px 6px 1px #CACACA, 7px 6px 1px #B7CADB;
+}
+
+
+/* -----------------------MAIN QUERIES------------------------------ */
+@container mein (min-width:913px) {
+    .main__content {
+        flex-direction: row;
+        max-width: 800px;
+        margin: auto;
+        gap: 150px;
+    }
+
+    .main__content-company {
+        justify-content: space-between;
+        align-content: center;
+        min-width: 400px;
+    }
+
+    .main__content-company>.main__h2 {
+        font-size: 3rem;
+    }
+
+    .main__content-company>.main__h2>.span__el {
+        font-size: 3rem;
+    }
+
+    .span__rey {
+        font-size: 3rem;
+    }
+
+    .main__h2-p {
+        font-size: 1.2rem;
+        margin-top: 30px;
+    }
+
+    .main__description-company {
+        align-content: center;
+        min-width: 400px;
+    }
+
+    .main__description-p {
+        font-size: 1.2rem;
+    }
+}
+
+section {
+    background-color: rgba(170, 51, 51, 0.892);
+    border: 1px solid;
+    min-height: 30em;
+}
+
+footer {
+    background-color: #f51;
+    min-height: 10em;
+}
