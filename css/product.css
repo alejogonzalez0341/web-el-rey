@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grey+Qo&display=swap');
+
+* {
+
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+*,
+body,
+div,
+ul,
+nav,
+header,
+footer,
+a,
+li,
+label {
+    margin: 0;
+    padding: 0;
+}
+
+/*################## SECTION CAROUSEL ##################*/
+.section__carousel {
+    margin: 0;
+    padding: 0;
+    container-name: carousel;
+    container-type: inline-size;
+}
+
+.carousel-container {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.section__header {
+    margin-top: 10px
+}
+
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 650px;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-inner img {
+    max-width: 100%;
+    display: block;
+}
+
+.carousel-thumbnails {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.carousel-thumbnails .thumbnail {
+    width: 10%;
+    margin: 0 10px;
+    cursor: pointer;
+    opacity: 0.7;
+    margin-bottom: 30px;
+}
+
+.carousel-thumbnails .thumbnail:hover {
+    opacity: 0.3;
+}
+
+.h3__details {
+    text-align: center;
+}
+
+.details__ul {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.details__ul>li {
+    margin: 10px;
+    margin-bottom: 10px;
+    text-wrap: wrap;
+    word-wrap: break-word;
+}
+
+/*################## SECTION CAROUSEL QUERIES ##################*/
+
+@container carousel (min-width:913px) {
+    .section__header>p {
+        font-size: 1.1em;
+    }
+
+    .carousel-container {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+
+    .carousel-thumbnails {
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 10px;
+        width: 200px;
+    }
+
+    .carousel-thumbnails .thumbnail {
+        width: 80%;
+        margin: 0 10px;
+        cursor: pointer;
+        opacity: 0.7;
+        margin-bottom: 30px;
+    }
+
+    .h3__details {
+        text-align: left;
+        font-size: 2em;
+    }
+
+    .details__ul>li {
+        font-size: 1.3em;
+    }
+
+}
