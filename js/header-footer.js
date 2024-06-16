@@ -5,7 +5,7 @@ header.innerHTML = `
         <input type="checkbox" class="header__checkbox" id="open-menu">
         <label for="open-menu" class="header__open-nav-button" role="button">=</label>
         <div class="header__content-logo">
-            <img src="/img/file.png" alt="Logo de la empresa" class="header__content-img">
+            <img src="img/file.png" alt="Logo de la empresa" class="header__content-img">
             <h1>El <span>Rey</span></h1>
         </div>
         <nav class="header__nav">
