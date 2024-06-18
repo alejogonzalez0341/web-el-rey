@@ -307,7 +307,6 @@ label {
 .section__product {
     margin: 15px;
     max-width: 100%;
-    min-height: 25em;
     border: 2px solid #E48F45;
     border-radius: 8px;
 }
@@ -315,6 +314,7 @@ label {
 .product__img {
     margin-top: 7px;
     max-width: 95%;
+    height: 100%;
     border-radius: 8px;
 }
 
