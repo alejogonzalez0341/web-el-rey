@@ -1,10 +1,26 @@
-let currentIndex = 0;
+var slideIndex = 1;
+showSlides(slideIndex);
 
-function changeSlide(index) {
-    const carouselInner = document.querySelector('.carousel-inner');
-    const slides = document.querySelectorAll('.carousel-inner img');
-    if (index >= 0 && index < slides.length) {
-        carouselInner.style.transform = `translateX(-${index * 100}%)`;
-        currentIndex = index;
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("carousel__slides");
+    var dots = document.getElementsByClassName("dot")
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
     }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
 }
