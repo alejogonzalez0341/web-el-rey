@@ -17,5 +17,3 @@ header.innerHTML = `
         </nav>
 `;
 
-
-footer.innerHTML = `<h3>footer</h3>`;
